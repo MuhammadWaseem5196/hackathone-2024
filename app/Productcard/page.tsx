@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { FaStar, FaCheckCircle } from "react-icons/fa";
 import Image from "next/image";
+import Navbar from "../components/NevBar";
+import FooterComponent from "../components/footer";
 const ProductPage = () => {
   const [quantity, setQuantity] = useState(1);
 
@@ -40,11 +42,13 @@ const ProductPage = () => {
     { name: "Polo with Contrast Trims", price: 212, discount: "-20%", stars: 4, image: "/Images/er.png" },
     { name: "Gradient Graphic T-shirt", price: 145, stars: 3, image: "/Images/fdf.png" },
     { name: "Polo with Tipping Details", price: 180, stars: 4, image: "/Images/erf.png" },
-    { name: "Black Striped T-shirt", price: 120, discount: "-30%", stars: 5, image: "/Images/fdvcv.png" },
+    { name: "Black Striped T-shirt", price: 120, discount: "-30%", stars: 5, image: "/Images/dlgd.png" },
   ];
 
   return (
-    <div className="container mx-auto p-4 md:p-8 space-y-12">
+    <div>
+      <Navbar/>
+      <div className="container mx-auto p-4 md:p-8 space-y-12">
       {/* Product Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Image Gallery */}
@@ -170,7 +174,7 @@ const ProductPage = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {relatedProducts.map((product, index) => (
             <div key={index} className="border rounded-lg shadow-sm p-4">
-              <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-lg" />
+              <Image width={500} height={500} src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-lg" />
               <h3 className="mt-4 font-medium text-gray-800">{product.name}</h3>
               <div className="flex text-yellow-400 mt-2">
                 {Array(product.stars)
@@ -187,6 +191,8 @@ const ProductPage = () => {
           ))}
         </div>
       </div>
+    </div>
+    <FooterComponent/>
     </div>
   );
 };

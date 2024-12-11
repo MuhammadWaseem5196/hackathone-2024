@@ -145,8 +145,8 @@ export default function NewArrival() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             
             {cards1.map((card) => (
-              <Link href={"/Productcard"}>
-                <div key={card.id} className="overflow-hidden ">
+              <Link href={"/Productcard"} key={card.id}>
+                <div  className="overflow-hidden ">
                 {/* Card Image */}
                 <div className="h-56 border-2 border-[#F0EEED] bg-[#F0EEED] rounded-xl w-full relative">
                   <Image

@@ -17,7 +17,8 @@ export default function DressStyle() {
               src="/Images/casual1.png"
               alt="Image 1"
               
-              layout="fill"
+              height={300}
+              width={300}
              
               objectFit="cover"
               className=" scale-x-[-1] w-full h-full "
