@@ -1,5 +1,6 @@
 import { AiFillStar } from "react-icons/ai";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Card {
   id: number;
@@ -77,6 +78,8 @@ export default function NewArrival() {
     },
   ];
 
+     
+
   return (
     <div className="mt-8 w-full  flex justify-center">
       <div className="w-full max-w-[1200px]">
@@ -89,7 +92,8 @@ export default function NewArrival() {
             {cards.map((card) => (
               <div key={card.id} className="overflow-hidden ">
                 {/* Card Image */}
-                <div className="h-56 border-2 border-[#F0EEED] bg-[#F0EEED] rounded-xl w-full relative">
+                <Link href={"/Productcard"}>
+                <div  className="h-56 border-2 border-[#F0EEED] bg-[#F0EEED] rounded-xl w-full relative ">
                   <Image
                   width={500}
                   height={300}
@@ -98,6 +102,7 @@ export default function NewArrival() {
                     className="object-cover w-full h-full border-[#F0EEED] rounded-xl"
                   />
                 </div>
+                </Link> 
 
                 {/* Card Content */}
                 <div className="p-4 ">
@@ -138,8 +143,10 @@ export default function NewArrival() {
                     
         <div className="w-full px-4 py-4 mt-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            
             {cards1.map((card) => (
-              <div key={card.id} className="overflow-hidden ">
+              <Link href={"/Productcard"}>
+                <div key={card.id} className="overflow-hidden ">
                 {/* Card Image */}
                 <div className="h-56 border-2 border-[#F0EEED] bg-[#F0EEED] rounded-xl w-full relative">
                   <Image
@@ -181,7 +188,9 @@ export default function NewArrival() {
                   </div>
                 </div>
               </div>
+              </Link>
             ))}
+            
           </div>
         </div>
         <div className="w-full flex justify-center items-center"><div className="lg:text-sm lg:w-28 lg:pt-1 text-center border-2 border-gray-200 rounded-full w-11/12 h-8 pt-2 text-[10px]">View All</div></div>
