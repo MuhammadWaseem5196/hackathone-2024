@@ -19,7 +19,7 @@ const Navbar = () => {
 
   // Define slides with proper typing
   const slides: Types1[] = [
-    { text: "Shop Category 1", link: "/shop/category1" },
+    { text: "Home", link: "/" },
     { text: "Shop Category 2", link: "/shop/category2" },
     { text: "Shop Category 3", link: "/shop/category3" },
     { text: "Shop Category 4", link: "/shop/category4" },

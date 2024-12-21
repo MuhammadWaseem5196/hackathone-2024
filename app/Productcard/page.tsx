@@ -95,7 +95,7 @@ const ProductPage = () => {
           </div>
           <div className="space-y-3">
             <h3 className="font-semibold">Choose Size:</h3>
-            <div className="flex space-x-3">
+            <div className="flex space-x-1 ">
               {["Small", "Medium", "Large", "X-Large"].map((size) => (
                 <button key={size} className="px-4 py-2 border rounded-full bg-gray-100 hover:bg-gray-100">
                   {size}
