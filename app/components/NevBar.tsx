@@ -111,14 +111,14 @@ const Navbar = () => {
             </div>
 
             {/* Other Links */}
-            <Link href="/sale" className="text-gray-600 hover:text-black">
-              On Sale
+            <Link href="/" className="text-gray-600 hover:text-black">
+              Home
             </Link>
-            <Link href="/new-arrivals" className="text-gray-600 hover:text-black">
-              New Arrivals
+            <Link href="/cart" className="text-gray-600 hover:text-black">
+              Cart
             </Link>
-            <Link href="/brands" className="text-gray-600 hover:text-black">
-              Brand
+            <Link href="/Catogerypage" className="text-gray-600 hover:text-black">
+             Catogery
             </Link>
 
             {/* Search Bar */}
